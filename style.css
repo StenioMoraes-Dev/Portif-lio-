@@ -1,48 +1,87 @@
-/* === GLOBAL === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html body{
-  height: 100%;
-  margin: 0;
-}
-/* RECICLADOS*/
-ul li, ol li{
-   list-style: none;
-}
+/*====== RECICLAVEIS =====*/
 a{
-   text-decoration: none;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
 }
 
-/* RELACIONAMENTO */
-@media (max-width: 768px) {
-  .container{ 
-  flex-direction: column; /* Celular - Vertical/Coluna*/
-  }
+/*===== ESTRUTURA =====*/
+body{
+  font-family: Roboto, Arial, Sans-Serif;
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  .container{
-  flex-direction: row; /* Pc - Horzontal*/
-  }
+main{
+  background: red;
+  flex: 1;
 }
 header{
-   background: Gray;
-   padding: 5vw;
+  padding: 10px;
+  background-color: Gray;
 }
-main{
-   background: green;
-   flex: row;
-   padding: 20vw;
-   padding-left: 5vw;
-   padding-top: 2vw;
+section{
+  background: green;
+  padding: 20px;
+}
+article{
+  padding: 8px 16px 2px;
+  background: pink;
+  display: flex;
+  flex-direction: column;
+}
+article h2 {
+  text-align: center;
+}
+
+article p {
+  margin-top: 5px;
+}
+article img{
+  width: 100%;
+  height: auto;
+  display: block;
 }
 footer{
-   background: Gray;
-   display: flex;
-   flex: row;
-   padding: 4vw;
+  background: gray;
+  padding: 10px;
+}
+footer h4{
+   text-align: center;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+@media (min-width: 700px) {
+/* ===== CARDS ===== */
+  #cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  article {
+  flex-direction: row;
+  gap: 10px;
+  }
+  article h2 {
+  text-align: center;
+  margin-top: 45px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  }
+  article p {
+  flex-direction: column;
+  text-align: center;
+  margin-inline-start: -10px;
+  }
+  article img {
+    width: 30%;
+  }
+/* ===== RODAPÉ =====*/
+  footer {
+  }
 }
