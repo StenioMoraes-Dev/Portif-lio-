@@ -1,0 +1,48 @@
+/* === GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body{
+  height: 100%;
+  margin: 0;
+}
+/* RECICLADOS*/
+ul li, ol li{
+   list-style: none;
+}
+a{
+   text-decoration: none;
+}
+
+/* RELACIONAMENTO */
+@media (max-width: 768px) {
+  .container{ 
+  flex-direction: column; /* Celular - Vertical/Coluna*/
+  }
+}
+
+@media (min-width: 768px) {
+  .container{
+  flex-direction: row; /* Pc - Horzontal*/
+  }
+}
+header{
+   background: Gray;
+   padding: 5vw;
+}
+main{
+   background: green;
+   flex: row;
+   padding: 20vw;
+   padding-left: 5vw;
+   padding-top: 2vw;
+}
+footer{
+   background: Gray;
+   display: flex;
+   flex: row;
+   padding: 4vw;
+}
